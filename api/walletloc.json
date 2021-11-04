@@ -1,0 +1,7 @@
+{
+  "rooms": {
+  "living room": "false",
+  "bedroom": "false",
+  "bathroom": "true"
+  }
+}
