@@ -3,7 +3,7 @@ const Theme = {
   flexDirection: "column",
   alignItems: "center",
   fontFamily: "'Merriweather', serif",
-  h3: {
+  header: {
     fontFamily: "'Work Sans', sans-serif",
     fontWeight: "800",
     fontSize: "1.5vw",

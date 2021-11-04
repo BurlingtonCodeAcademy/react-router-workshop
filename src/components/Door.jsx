@@ -48,7 +48,7 @@ export default function Door() {
   return (
     <>
       <div style={styles.Theme}>
-        <h3 style={styles.Theme.h3}>{h3Text}</h3>
+        <h3 style={styles.Theme.header}>{h3Text}</h3>
         <DoorAnim didFind={didFind} setDidFind={setDidFind} />
         <p>
           You are about to head out to the grocery store and realize you don't
