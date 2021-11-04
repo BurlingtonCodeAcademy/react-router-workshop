@@ -12,37 +12,17 @@ export default function Door() {
   //setting up useEffect to fetch from our api
   useEffect(() => {
     //fetching from route set up on server
-    fetch("http://localhost:5000/api")
-      .then((res) => {
-        //turning the response from the server into a json object
-        return res.json();
-      })
-      //setting our state to hold the json object
-      .then((json) => {
-        setWalletLoc(json);
-      });
-    //having this useEffect fire upon usage of setWalletLoc
-  }, [setWalletLoc]);
+    //turning the response from the server into a json object
+    //setting our state to hold the json object
+  });
 
   //creating a function to handle when the user hits the submit button
   const handleSubmit = (event) => {
     //prevents refresh of page
-    event.preventDefault();
-
     //grabs the user input and sanitizes it
-    let userInput = event.target.room.value.toLowerCase();
-
     //if the userInput matches a key in rooms and holds the value true
-    if (walletLoc.rooms[userInput] === "true") {
-      //set didFind to true to trigger door animation
-      setDidFind(true);
-      //conditionally set text of h3 element
-      setH3Text("You're all ready to head to the Co-Op!");
-    } else {
-      setH3Text(
-        "You didn't find it there... how are you going to buy your favorite local Vermont vegan cheesecake without your wallet?"
-      );
-    }
+    //set didFind to true to trigger door animation
+    //conditionally set text of h3 element
   };
 
   return (
@@ -54,19 +34,9 @@ export default function Door() {
           You are about to head out to the grocery store and realize you don't
           know where your wallet is. Time to go look around your apartment for
           it...
-        </p>
+        </p>{" "}
         <div style={styles.Theme.buttonBox}>
           {/* using Link from React Router to connect to our other pages  */}
-          <Link to="/bedroom" style={styles.Theme.buttons}>
-            Bedroom
-          </Link>
-          <Link to="/livingroom" style={styles.Theme.buttons}>
-            Living
-          </Link>
-
-          <Link to="/bathroom" style={styles.Theme.buttons}>
-            Bathroom
-          </Link>
         </div>
         <form onSubmit={handleSubmit}>
           <label style={{ textDecoration: "underline" }}>

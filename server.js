@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 //creating the API route
 app.get("/api", (req, res) => {
     //sending the json to this API route
-    res.sendFile(__dirname + "/api/walletloc.json")
+   
 })
 
 
